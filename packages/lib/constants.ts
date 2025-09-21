@@ -87,8 +87,8 @@ export const PUBLIC_QUICK_AVAILABILITY_ROLLOUT =
 
 /** @deprecated use `WEBAPP_URL` */
 export const NEXT_PUBLIC_BASE_URL = process.env.NEXT_PUBLIC_WEBAPP_URL || `https://${process.env.VERCEL_URL}`;
-export const LOGO = "/booking-buraq-ai-wordmark.svg";
-export const LOGO_ICON = "/booking-buraq-ai-wordmark.svg";
+export const LOGO = "/calcom-logo-white-word.svg";
+export const LOGO_ICON = "/cal-com-icon-white.svg";
 export const AVATAR_FALLBACK = "/avatar.svg";
 export const FAVICON_16 = "/buraq-logo-16x16.png";
 export const FAVICON_32 = "/buraq-logo-32x32.png";
