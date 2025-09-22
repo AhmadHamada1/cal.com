@@ -19,7 +19,24 @@ function MyApp(props: AppProps) {
       <WebPushProvider>
         {/* @ts-expect-error FIXME remove this comment when upgrading typescript to v5 */}
         <CacheProvider>
-          {Component.PageWrapper ? <Component.PageWrapper {...props} /> : <Component {...pageProps} />}
+          {Component.PageWrapper ? (
+            <Component.PageWrapper {...props} />
+          ) : (
+            <Component {...pageProps} />
+          )}
+
+          {/* ✅ Footer ثابت */}
+          <footer className="border-t py-6 text-center text-sm text-gray-500">
+            <p>© {new Date().getFullYear()} Buraq AI. All rights reserved.</p>
+            <div className="mt-2 flex justify-center space-x-4">
+              <a href="/privacy" className="hover:underline">
+                Privacy Policy
+              </a>
+              <a href="/terms" className="hover:underline">
+                Terms of Service
+              </a>
+            </div>
+          </footer>
         </CacheProvider>
       </WebPushProvider>
     </SessionProvider>
